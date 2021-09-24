@@ -68,7 +68,7 @@ require "pluralz"
 module Pluralz; end
 ```
 
-## 4. Add an inflection module
+### 4. Add an inflection module
 
 ```sh
 mkdir lib/pluralz spec/lib/pluralz
@@ -110,4 +110,19 @@ gemspec
 
 ```sh
 bundle install
+```
+
+And so on.
+
+### 5. Build the gem
+
+```sh
+echo "*.gemspec" >> .gitignore
+gem build pluralz.gemspec
+```
+
+Use it in another project
+
+```rb
+gem 'pluralz', path: "$PATH_TO_GEM/pluralz-dryrun"
 ```
